@@ -60,7 +60,8 @@ ui <- fluidPage(
             tableOutput('qrd') # l'alternativa è verbatimTextOutput('qrd') ma viene lungo, con la barra di scorrimento orizzontale... brutto
         ),
         tabPanel(
-            'info'
+            'info',
+            # come usare l'app e cosa faccia la stessa
         )
     )    
 )
