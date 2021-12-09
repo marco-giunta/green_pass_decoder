@@ -2,9 +2,7 @@ library(shiny)
 library(shinythemes)
 library(tidyverse)
 library(reticulate)
-#library(lubridate)
 
-setwd('C:/Users/ma_gi/Desktop/gp')
 gp <- import('gp')
 builtins <- import_builtins()
 
