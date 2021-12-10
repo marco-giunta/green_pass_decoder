@@ -6,8 +6,6 @@ library(reticulate)
 gp <- import('gp')
 builtins <- import_builtins()
 
-qr_mio <- builtins$open('./Marco.txt')$read()
-d <- gp$green_pass_decoder(qr_mio)
 
 formatta_dati_gp <- function(gp_dic) {
     gpd <- (gp_dic$`-260`)$`1` # occhio, sono stringhe! Se metti i numeri cerca di effettuare l'indexing visto che in R le named list fondono i dizionari e le liste di python
