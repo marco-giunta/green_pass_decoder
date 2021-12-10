@@ -2,7 +2,7 @@
 ## Shiny web app per decifrare il contenuto di un green pass
 
 Il file `gp_app.r` contiene una web app capace di decodificare un green pass mediante un'interfaccia grafica; in particolare per usare l'app bisogna incollare nel campo indicato la stringa ottenuta usando una qualunque app per leggere codici qr. 
-La lettura della stringa viene effettuata mediante lo script python `gp.py` (ispirato da [questo codice di Tobias Girstmair](https://git.gir.st/greenpass.git/blob_plain/master:/greenpass.py) descritto in [questo post](https://gir.st/blog/greenpass.html), vedi anche [qui](https://github.com/ehn-dcc-development/ehn-sign-verify-python-trivial)), che può essere usato indipendentemente importando la funzione `green_pass_decoder` al suo interno; in `gp_app.r` quest'ultima viene importata mediante `reticulate::import`.
+La lettura della stringa viene effettuata mediante lo script python `gp.py` (ispirato da [questo codice di Tobias Girstmair](https://git.gir.st/greenpass.git/blob_plain/master:/greenpass.py) descritto in [questo post](https://gir.st/blog/greenpass.html); vedi anche [qui](https://github.com/ehn-dcc-development/ehn-sign-verify-python-trivial)), che può essere usato indipendentemente importando la funzione `green_pass_decoder` al suo interno; in `gp_app.r` quest'ultima viene importata mediante `reticulate::import`.
 
 La stringa viene elaborata così:
 - vengono rimossi i primi 4 caratteri, che rappresentano un header irrilevante al fine di leggere il green pass;
