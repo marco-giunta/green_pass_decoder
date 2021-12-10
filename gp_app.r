@@ -20,7 +20,7 @@ formatta_dati_gp <- function(gp_dic) {
         gpd_v <- gpd$v[[1]] # nel dizionario alla chiave 'v' corrisponde una lista contenente un dizionario anziché direttamente il dizionario
         vp <- c('1119305005' = 'SARS-CoV-2 antigen vaccine', '1119349007' = 'SARS-CoV-2 mRNA vaccine', 'J07BX03' = 'vaccines that are neither an antigen nor an mRNA vaccine or this information is not known')
         # magari scarico e uso dei json come ad esempio fa lui https://github.com/jumpjack/greenpass anziché copiare manualmente da https://ec.europa.eu/health/sites/default/files/ehealth/docs/digital-green-certificates_dt-specifications_en.pdf
-        tmp <- tibble('virus' = 'COVID-19', 'vaccino/profilassi' = vp[gpd_v$vp])
+        tmp <- tibble('virus' = 'COVID-19', 'vaccino/profilassi' = vp[gpd_v$vp], 'data vaccino' = gpd_v$dt)
     }
 
     if (tipo_di_gp == 't') {
